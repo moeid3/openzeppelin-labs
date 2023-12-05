@@ -42,7 +42,7 @@ functions to be accessible just from the declared proxy owner.
 `EternalStorageProxy` is the contract that will delegate calls to specific implementations of the ERC20 token behavior.
 These behaviors are the code that can be upgraded by the token developer (e.g. `Token_V0` and `Token_V1`).
 `EternalStorageProxy` extends from the `EternalStorage` contract, and then from `OwnedUpgradeabilityProxy` (which in
-turn extends from `UpgradeabilityStorage` and `UpgradeabilityOwnerStorage`). Notice that `EternalStorageProxy` must
+turn extends from `UpgradeabilityProxy` and `UpgradeabilityOwnerStorage`). Notice that `EternalStorageProxy` must
 inherit from `EternalStorage` first to ensure that the storage structure lines up with contracts only inheriting from
 `EternalStorage`.
 
